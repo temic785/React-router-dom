@@ -35,6 +35,8 @@ const Nav = styled.nav`
     width: 30%;
     color: #282c34;
     font-size: 30px;
+
+
 `
 const Content = styled.div`
     background-color: #282c34;
@@ -50,7 +52,33 @@ const Footer = styled.footer`
     text-align: center;
     color: white;
 `
+const MainpicturesWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 
+    img {
+        width: 300px;
+        height: 300px;
+    }
+`
+
+const ModelWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
+`
+
+const NotFoundModel=styled.div`
+    display: flex;
+    justify-content: center;
+`
 export const S = {
-    NavWrapper, Header, Body, Nav, Content, Footer
+    NavWrapper, Header, Body, Nav, Content, Footer, MainpicturesWrapper, ModelWrapper,NotFoundModel
 }
