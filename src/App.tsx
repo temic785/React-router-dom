@@ -5,8 +5,7 @@ import {Abibas} from "./components/pages/Abibas";
 import {Navigate, NavLink, Route, Routes} from "react-router-dom";
 import {S} from "./components/pages/_styles";
 import "./App.css";
-import {ModelAdidas} from "./components/pages/ModelAdidas";
-import {ModelPuma} from "./components/pages/ModelPuma";
+import {Model} from "./components/pages/Model";
 
 const PATH = {
     Page1: "/adidas",
@@ -28,13 +27,12 @@ function App() {
 
                 <S.Content>
                     <Routes>
-                        <Route path="/" element={<Navigate to={"/page1"}/>}/>
+                        <Route path="/" element={<Navigate to={PATH.Page1}/>}/>
 
                         <Route path={PATH.Page1} element={<Adidas/>}/>
                         <Route path={PATH.Page2} element={<Puma/>}/>
                         <Route path={PATH.Page3} element={<Abibas/>}/>
-                        <Route path={"/adidas/:id"} element={<ModelAdidas/>}/>
-                        <Route path={"/puma/:id"} element={<ModelPuma/>}/>
+                        <Route path="/:model/:id" element={<Model />} />
 
                         {/*<Route path="/*" element={<Error404/>}/>*/}
                         <Route path="/*" element={<Navigate to={PATH.Error}/>}/>
@@ -43,7 +41,7 @@ function App() {
 
                 </S.Content>
             </S.Body>
-            <S.Footer>abibas 2023</S.Footer>
+            <S.Footer>abibas 2025</S.Footer>
         </div>
     );
 }

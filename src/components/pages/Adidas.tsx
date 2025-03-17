@@ -7,16 +7,16 @@ import "../../App.css";
 import {S} from "./_styles";
 import {NavLink} from "react-router-dom";
 
-export type ModelItem = {
-    id: string,
+export type CurrentModel = {
+    id: number,
     model: string;
     collection: string;
     price: string;
     picture: string;
 }
-export const adidasArr: ModelItem[] = [
+export const adidasArr: CurrentModel[] = [
     {
-        id: "1",
+        id: 1,
         model: "ADIDAS ADIFOM TRXN",
         collection: "new collection1",
         price: "100200$",
@@ -24,14 +24,14 @@ export const adidasArr: ModelItem[] = [
 
     },
     {
-        id: "2",
+        id: 2,
         model: "ADIDAS ADIFOM SUPER",
         collection: "new collection22",
         price: "200300$",
         picture: adidasModel2
     },
     {
-        id: "3",
+        id: 3,
         model: "ADIDAS SUPER SUPERSKI",
         collection: "new collection333",
         price: "300400$",

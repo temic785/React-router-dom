@@ -4,13 +4,13 @@ import pumaModel1 from "../../assets/puma1.webp"
 import pumaModel2 from "../../assets/puma2.webp";
 import pumaModel3
     from "../../assets/puma3.webp";
-import {ModelItem} from "./Adidas";
+import {CurrentModel} from "./Adidas";
 import {NavLink} from "react-router-dom";
 
 
-export const pumaArr: ModelItem[] = [
+export const pumaArr: CurrentModel[] = [
     {
-        id: "1",
+        id: 1,
         model: "PUMA ADIFOM TRXN",
         collection: "new collection1",
         price: "1233412$",
@@ -18,14 +18,14 @@ export const pumaArr: ModelItem[] = [
 
     },
     {
-        id: "2",
+        id: 2,
         model: "PUMA ADIFOM SUPER",
         collection: "new collection22",
         price: "342432$",
         picture: pumaModel2
     },
     {
-        id: "3",
+        id: 3,
         model: "PUMA SUPER SUPERSKI",
         collection: "new collection333",
         price: "12300400$",
