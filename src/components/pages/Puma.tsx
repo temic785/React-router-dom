@@ -39,7 +39,7 @@ export const Puma = () => {
             <h2>PUMA</h2>
             <S.MainpicturesWrapper>
                 {pumaArr.map((puma, index) => (
-                    <S.NavWrapper><NavLink to={`/puma/${puma.id}`}> <img src={puma.picture} alt={puma.model}/>
+                    <S.NavWrapper key={puma.id}><NavLink  to={`/puma/${puma.id}`}> <img src={puma.picture} alt={puma.model}/>
                     </NavLink></S.NavWrapper>
                 ))}
             </S.MainpicturesWrapper>

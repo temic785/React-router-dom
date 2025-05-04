@@ -46,7 +46,7 @@ export const Adidas = () => {
             <h2> ADIDAS</h2>
             <S.MainpicturesWrapper>
                 {adidasArr.map((adidas, index) => (
-                    <S.NavWrapper><NavLink to={`/adidas/${adidas.id}`}> <img src={adidas.picture} alt={adidas.model}/>
+                    <S.NavWrapper><NavLink key={adidas.id} to={`/adidas/${adidas.id}`}> <img src={adidas.picture} alt={adidas.model}/>
                     </NavLink></S.NavWrapper>
                 ))}
             </S.MainpicturesWrapper>
