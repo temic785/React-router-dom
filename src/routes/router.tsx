@@ -15,21 +15,23 @@ const PATH = {
     PUMA: "/puma",
     ABIBAS: "/abibas",
     PRICES: "/prices",
-    ERROR: "/*",
+    ERROR: "*",
     MODEL: "/:model/:id",
     PROTECTED_PAGE: "/protected",
     LOGIN: "/login",
 } as const
+
 const privateRoutes: RouteObject[] = [
     {
         path: PATH.PROTECTED_PAGE,
         element: <ProtectedPage/>
-
     },
 ]
 const publicRoutes: RouteObject[] = [
-
-
+    {
+        index: true,
+        element: <Adidas/>,
+    },
     {
         path: PATH.ADIDAS,
         element: <Adidas/>,
@@ -52,7 +54,7 @@ const publicRoutes: RouteObject[] = [
     },
 
     {
-        path: PATH.ERROR,
+        path: "*",
         element: <Error404/>,
     },
     {

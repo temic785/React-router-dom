@@ -1,12 +1,13 @@
 import React from "react";
-import {NavLink, Outlet} from "react-router-dom";
+import {Link, NavLink, Outlet, useNavigate} from "react-router-dom";
 import {S} from "./components/pages/_styles";
+import styles from "./components/pages/Site.module.css";
 import "./App.css";
 
 const PATH = {
-    Page1: "/adidas",
-    Page2: "/puma",
-    Page3: "/abibas",
+    Adidas: "/adidas",
+    Puma: "/puma",
+    Abibas: "/abibas",
     Prices: "/prices",
     Error: "/error404",
     ProtectedPage: "/protected",
@@ -14,19 +15,29 @@ const PATH = {
 } as const
 
 function App() {
+
+    const navigate = useNavigate()
+    const navigateHandler = () => {
+                navigate(-1)
+    }
     return (
         <div>
             <S.Header><h1>HEADER</h1></S.Header>
             <S.Body>
                 <S.Nav>
-                    <S.NavWrapper><NavLink to={PATH.Page1}> Adidas </NavLink></S.NavWrapper>
-                    <S.NavWrapper><NavLink to={PATH.Page2}> Puma </NavLink></S.NavWrapper>
-                    <S.NavWrapper><NavLink to={PATH.Page3}> Abibas </NavLink></S.NavWrapper>
+                    <S.NavWrapper><NavLink to={PATH.Adidas}> Adidas </NavLink></S.NavWrapper>
+                    <S.NavWrapper><NavLink to={PATH.Puma}> Puma </NavLink></S.NavWrapper>
+                    <S.NavWrapper><NavLink to={PATH.Abibas}> Abibas </NavLink></S.NavWrapper>
                     <S.NavWrapper><NavLink to={PATH.Prices}> Prices </NavLink></S.NavWrapper>
                     <S.NavWrapper><NavLink to={PATH.ProtectedPage}> Protected Page </NavLink></S.NavWrapper>
                 </S.Nav>
 
                 <S.Content>
+                    <div className={styles.HorizontalNavigation}>
+                        <Link to={PATH.Adidas} onClick={navigateHandler} className={styles.LinkLikeButton}>HOME</Link>
+                        <button onClick={navigateHandler} className={styles.ButtonLikeLink}>Назад</button>
+                    </div>
+
                     <Outlet/>
                 </S.Content>
             </S.Body>
